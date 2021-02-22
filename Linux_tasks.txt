@@ -1,0 +1,143 @@
+1) how to check ram and cpu in Linux? 
+
+Cat /proc/cpuinfo
+
+
+2) what is process?
+A process is a series or set of activities that interact to produce a result; it may occur once-only or be recurrent or periodic.
+
+
+
+3) how to check any application status?
+ps -aux
+
+
+4) how to check one (any)application is installed or not? 
+rpm -qa application name
+
+
+5) how to check which Linux distribution u r using (such as redhat, centos) ? 
+
+cat /etc/*-release or hostnamectl
+
+6) what is swap ? 
+Swap space in Linux is used when the amount of physical memory (RAM) is full. If the system needs more memory resources and the RAM is full, inactive pages in memory are moved to the swap space. ... Swap space can be a dedicated swap partition (recommended), a swap file, or a combination of swap partitions and swap files.
+
+
+7) what is service? 
+A service is a program that runs in the background outside the interactive control of system users as they lack an interface. This in order to provide even more security, because some of these services are crucial for the operation of the operating system.
+
+
+8) how to check one file is available or not? 
+touch file.txt
+
+
+1)  how can i check how many users i have in my linux box? and how many users logged in currently?
+
+W
+
+
+2) how to check and change system time and time zone?
+To check use     $ timedatectl
+To change        $ timedatectl list-timezones
+
+3) what is host name and how to change?
+
+
+4) what is ip address ? how to check system ip address?
+An Internet Protocol address (IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. An IP address serves two main functions: host or network interface identification and location addressing.
+ip addr 
+
+
+5) what is system log file and its path ?
+Log files are a set of records that Linux maintains for the administrators to keep track of important events. They contain messages about the server, including the kernel, services and applications running on it. Linux provides a centralized repository of log files that can be located under the /var/log directory.
+
+
+1) how to lock/inactive a user? 
+usermod -L testuser or passwd -l testuser
+
+
+
+2) difference between root and normal user? 
+The root user is basically equivalent to the administrator user on Windows – the root user has maximum permissions and can do anything to the system. Normal users on Linux run with reduced permissions – for example, they can't install software or write to system directories.
+
+
+3) what is service and where service files are located?
+A service is a program that runs in the background outside the interactive control of system users as they lack an interface. This in order to provide even more security, because some of these services are crucial for the operation of the operating system.
+
+The /usr/lib/systemd/user/ directory is the default location where unit files are installed by packages. Unit files in the default directory should not be altered. The /run/systemd/system/ directory is the runtime location for unit files. The /etc/systemd/system/ directory stores unit files that extend a service.
+
+ 
+4) what is process? 
+An instance of a running program is called a process. Every time you run a shell command, a program is run and a process is created for it. ... Linux is a multitasking operating system, which means that multiple programs can be running at the same time (processes are also known as tasks).
+
+
+5) wht is kernel?
+The Linux® kernel is the main component of a Linux operating system (OS) and is the core interface between a computer’s hardware and its processes. It communicates between the 2, managing resources as efficiently as possible.
+
+The kernel is so named because—like a seed inside a hard shell—it exists within the OS and controls all the major functions of the hardware, whether it’s a phone, laptop, server, or any other kind of computer.
+
+
+1) how to check an rpm package is installed or not (example java) 
+# rpm -qa
+
+
+2) what is ~ ? 
+The tilde (~) is a Linux "shortcut" to denote a user's home directory. Thus tilde slash (~/) is the beginning of a path to a file or directory below the user's home directory. For example, for user01, file /home/user01/test.
+
+
+3) what is shell prompt? 
+The shell prompt (or command line) is where one types commands. When accessing the system through a text-based terminal, the shell is the main way of accessing programs and doing work on the system. In effect, it is a shell surrounding all other programs being run.
+
+4) what is # in shell prompt? 
+
+Root user
+
+5) what is $ in shell prompt?
+Normal user
+
+1) how to check system time and change it? 
+
+
+2) how to check how many harddisks I have? 
+
+
+3) what is filesystem(drive in windows) ? How to check how many I have? 
+
+
+4) how to check how many users I have total in my system? 
+W
+
+
+5) how to add a user into a group? 
+
+Ex: amar user into sam group
+
+sudo adduser user_name new_group or sudo useradd –G new_group user_name
+sudo adduser amar sam 
+
+
+
+1) what is hostname? How to change it? 
+A hostname is a name which is given to a computer and it attached to the network. Its main purpose is to uniquely identify over a network.
+sudo hostnamectl set-hostname newname
+
+
+2) how to find out a file or directory full path ( which location it is there) 
+Pwd
+
+3) what is process? How to kill a process? 
+When a process cannot be closed any other way, it can be manually killed via command line.
+To kill a process in Linux, you must first find the process. You can use the top, ps, pidof or pgrep commands.
+Once you have found the process you want to kill, you can kill it with the killall,pkill,kill,xkill or top commands.
+When killing a process, you can send a termination signal of SIGHUP, SIGKILL, or SIGTERM.
+You need to have permission to kill a process, which you can gain through the use of the sudo command.
+
+
+
+4) how to check application status? 
+#service --status-all
+
+
+5) how to check since when my system is running?
+Uptime
